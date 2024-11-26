@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Allyson</title>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfólio Allyson</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                line-height: 1.6;
+                color: #333;
+                background-color: #f4f4f9;
+            }
+    
+            header {
+                background: #007BFF;
+                color: white;
+                padding: 2em 0;
+                text-align: center;
+            }
+    
+            header img {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                margin-bottom: 1em;
+                border: 3px solid white;
+            }
+    
+            header h1 {
+                margin: 0.5em 0;
+            }
+    
+            header a {
+                color: #ffeb3b;
+                text-decoration: none;
+                font-size: 1.2em;
+            }
+    
+            header a:hover {
+                text-decoration: underline;
+            }
+    
+            main {
+                padding: 1em;
+            }
+    
+            section {
+                margin-bottom: 2em;
+            }
+    
+            section h2 {
+                color: #007BFF;
+                border-bottom: 2px solid #007BFF;
+                display: inline-block;
+                margin-bottom: 0.5em;
+            }
+    
+            ul {
+                list-style: none;
+                padding: 0;
+            }
+    
+            ul li {
+                background: #e7f3ff;
+                margin: 0.5em 0;
+                padding: 0.5em;
+                border-radius: 5px;
+            }
+    
+            .sobre-mim {
+                background: #f9f9f9;
+                padding: 1em;
+                border-left: 5px solid #007BFF;
+                margin-bottom: 2em;
+                border-radius: 5px;
+            }
+    
+            footer {
+                text-align: center;
+                padding: 1em 0;
+                background: #333;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <img id="foto" src="c:\Users\ferna\OneDrive\Documentos\foto perfil.jpg" alt="Foto de perfil">
+            <h1 id="nome">Allyson Fernando da Silva Acioli</h1>
+            <p id="endereco">Camaragibe - PE</p>
+            <p id="numero">Telefone: (81) 98369-6915</p>
+            <p><a id="linkedin" href="https://www.linkedin.com/in/allyson-fernando-532b38264/" target="_blank">Meu LinkedIn</a></p>
+        </header>
+        <main>
+            <section class="sobre-mim">
+                <h2>Sobre Mim</h2>
+                <p id="sobre-mim">Estou cursando o 2º período de análise e
+                    desenvolvimento de sistemas na Uninassau,
+                    estou em busca da minha primeira
+                    oportunidade na área da tecnologia. Como
+                    iniciante de carreira, busco conhecimento,
+                    experiência e oportunidades de crescimento
+                    profissional.
+                    .</p>
+            </section>
+            <section>
+                <h2>Habilidades</h2>
+                <ul id="habilidades">
+                    Comunicativo
+                    <h1>
+
+                    </h1>Otimista
+                    <h1>
+
+                    </h1>Calmo
+                    <h1>
+
+                    </h1>Adaptável
+                    <h1>
+
+                    </h1>Proativo
+                </ul>
+            </section>
+            <section>
+                <h2>Cursos</h2>
+                <ul id="cursos">
+                    Inglês básico - CNA (conclusão 2018)
+                    <h1>
+
+                    </h1>Espanhol Intermediário- CNA (conclusão 2023)
+                    <h1>
+
+                    </h1> projetos de sistemas de T.I - Fund. Bradesco (conclusão 2024)
+                    <h1>
+
+                    </h1>segurança da informação Mod. 0 - Curso em vídeo (conclusão 2024)
+                </ul>
+            </section>
+        </main>
+        <footer>
+            </p>
+        </footer>
+        <script>
+            // Exemplo de dados
+            const dadosPessoais = {
+                nome: "Allyson Fernando da Silva Acioli"
+                f: "ss", // URL da foto
+                endereco: "Camaragibe - PE",
+                numero: "(81) 98369-6915",
+                linkedin: "https://www.linkedin.com/in/allyson-fernando-532b38264/",
+                sobreMim: "Estou cursando o 2º período de análise e desenvolvimento de sistemas na Uninassau, estou em busca da minha primeira oportunidade na área da tecnologia. Como iniciante de carreira, busco conhecimento, experiência e oportunidades de crescimento profissional.",
+                habilidades: ["Comunicativo", "otimista", "calmo", "adaptável", "proativo"],
+                cursos: ["Inglês básico - CNA (conclusão 2018)", "Espanhol Intermediário- CNA (conclusão 2023)", "projetos de sistemas de T.I - Fund. Bradesco (conclusão 2024)", "segurança da informação Mod. 0 - Curso em vídeo (conclusão 2024)"]
+            };
+    
+            // Atualiza o DOM com os dados
+            document.getElementById('foto').src = dadosPessoais.foto;
+            document.getElementById('nome').textContent = dadosPessoais.nome;
+            document.getElementById('endereco').textContent = `Endereço: ${dadosPessoais.endereco}`;
+            document.getElementById('numero').textContent = `Telefone: ${dadosPessoais.numero}`;
+            document.getElementById('linkedin').href = dadosPessoais.linkedin;
+            document.getElementById('linkedin').textContent = "Acesse meu LinkedIn";
+            document.getElementById('sobre-mim').textContent = dadosPessoais.sobreMim;
+    
+            // Adiciona habilidades
+            const habilidadesUl = document.getElementById('habilidades');
+            dadosPessoais.habilidades.forEach(habilidade => {
+                const li = document.createElement('li');
+                li.textContent = habilidade;
+                habilidadesUl.appendChild(li);
+            });
+    
+            // Adiciona cursos
+            const cursosUl = document.getElementById('cursos');
+            dadosPessoais.cursos.forEach(curso => {
+                const li = document.createElement('li');
+                li.textContent = curso;
+                cursosUl.appendChild(li);
+            });
+        </script>
+    </body>
+    </html>
+    
+</body>
+</html>
